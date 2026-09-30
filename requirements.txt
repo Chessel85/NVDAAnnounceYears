@@ -1,0 +1,11 @@
+An NVDA addon is wanted that intercepts four digit numbers and decides if they should be announced as years rather than a number.
+For example,  1523 is by default announced  as one thousand five hundred and twenty three. 
+As a date it would be pronounced fifteen twenty three.
+The context is everything.
+A four digit number with a comma or full stop does not count. e.g. 1,523 and 1.523.
+Preceding the date with a month, in full or abbreviated counts. e.g. September 2026 or Sept 2026.
+Preceding with 'in' counts. It was built in 1523.
+Preceding with 'year' counts. It was built in the year 1523.
+Do some of your own analysis to find out other rules for converting the number to a date.
+And of course, is this a viable addon?
+I already have a working NVDA scratch folder.
