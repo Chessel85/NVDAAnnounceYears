@@ -9,3 +9,8 @@ Preceding with 'year' counts. It was built in the year 1523.
 Do some of your own analysis to find out other rules for converting the number to a date.
 And of course, is this a viable addon?
 I already have a working NVDA scratch folder.
+
+
+Submission process
+Submit request as an addon is at:
+https://github.com/nvaccess/addon-datastore/issues/11879

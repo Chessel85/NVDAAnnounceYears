@@ -46,7 +46,7 @@ TWENTY_STYLES = (
 FOUR_DIGITS_RE = re.compile(r"\d{4}")
 
 # Translators: Name of the add-on's settings panel and input gestures category.
-ADDON_NAME = _("Years as Dates")
+ADDON_NAME = _("Announce Years")
 
 
 def convertSpeechSequence(speechSequence):
@@ -72,7 +72,7 @@ def convertSpeechSequence(speechSequence):
 			joined = " ".join(run)
 			converted = yearDetector.convertYears(joined, twentyStyle)
 			if converted != joined:
-				log.debug(f"Years as Dates: {joined!r} -> {converted!r}")
+				log.debug(f"Announce Years: {joined!r} -> {converted!r}")
 				result.append(converted)
 				run.clear()
 				return
@@ -99,7 +99,7 @@ class YearsAsDatesPanel(SettingsPanel):
 	def makeSettings(self, settingsSizer):
 		helper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		self.enabledCheckBox = helper.addItem(
-			# Translators: Checkbox in the Years as Dates settings panel.
+			# Translators: Checkbox in the Announce Years settings panel.
 			wx.CheckBox(self, label=_("&Speak four-digit numbers as years when the context suggests a year")),
 		)
 		self.enabledCheckBox.SetValue(config.conf[SECTION]["enabled"])
@@ -135,7 +135,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return convertSpeechSequence(speechSequence)
 		except Exception:
 			# Never let a bug here stop NVDA from speaking.
-			log.exception("Years as Dates: conversion failed")
+			log.exception("Announce Years: conversion failed")
 			return speechSequence
 
 	@script(
@@ -147,4 +147,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		enabled = not config.conf[SECTION]["enabled"]
 		config.conf[SECTION]["enabled"] = enabled
 		# Translators: Reported when the add-on is turned on or off.
-		ui.message(_("Years as dates on") if enabled else _("Years as dates off"))
+		ui.message(_("Announce Years on") if enabled else _("Announce Years off"))

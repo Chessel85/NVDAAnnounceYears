@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-An NVDA (NonVisual Desktop Access screen reader) add-on that speaks four-digit numbers as years when the context says they are years: "built in 1523" → "fifteen twenty-three" instead of "one thousand five hundred and twenty three". `requirements.txt` is the user's original brief in plain English, **not** a pip requirements file. The repo is https://github.com/Chessel85/NVDAAnnounceYears (currently private; the Add-on Store needs it public). Licence: GPL-2.0.
+An NVDA (NonVisual Desktop Access screen reader) add-on that speaks four-digit numbers as years when the context says they are years: "built in 1523" → "fifteen twenty-three" instead of "one thousand five hundred and twenty three". `requirements.txt` is the user's original brief in plain English, **not** a pip requirements file. The repo is https://github.com/Chessel85/NVDAAnnounceYears (public). Licence: GPL-2.0.
 
 ## Commands
 
